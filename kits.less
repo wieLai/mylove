@@ -1,0 +1,77 @@
+// 正方形混入类
+// @h 的默认值就是和 @w 保持一致
+.box (@w:200px; @h:@w;) {
+    // 如果只传入一个值，就是正方形
+    width: @w * 1px;
+    // 如果只传入两个值，就是长方形，高度使用传进来的高度
+    height: @h * 1px;
+}
+
+// 多行文本溢出显示省略号混入类
+.ell (@line:2) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    // 把行数定义成变量
+    -webkit-line-clamp: @line;
+    overflow: hidden;
+}
+
+.arrow(@w:7px) {
+    &::after {
+        content: "";
+        width: @w;
+        height: @w;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        // 旋转 45 度
+        transform: rotate(45deg);
+    }
+}
+
+// 定义测试用的混入类
+.bg1() {
+    background-color: pink;
+}
+
+.bg2() {
+    background-color: hotpink;
+}
+
+.bg3() {
+    background-color: gold;
+}
+
+.bg4() {
+    background-color: greenyellow;
+}
+
+// 栅格化排版
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// 分配剩余宽度
+.col {
+    flex: 1;
+}
+
+.col-100 {
+    flex: 0 0 100%;
+}
+
+.col-50 {
+    flex: 0 0 50%;
+}
+
+.col-33 {
+    flex: 0 0 33.3333%;
+}
+
+.col-25 {
+    flex: 0 0 25%;
+}
+
+.col-20 {
+    flex: 0 0 20%;
+}

@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+@serverColor:#fa7f50;
+@tickerColor:#3d98ff;
+@travelColor:#44c522;
+.view{
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #eee;
+    .common{
+        height: 90px;
+        background-color: #fa7f50;
+        display: flex;
+        border-radius: 5px;
+        margin-bottom: 6px;
+        color: white;
+    }
+    .common_left{
+         flex: 1;
+        //  background-color: lightcoral;
+         display: flex;
+         justify-content: center;
+         border-right: 1px solid white;
+         a{
+             display: flex;
+             flex-direction: column;
+             justify-content: space-around;
+
+             span{
+              
+             }
+             .server_icon{
+                 width: 43px;
+                 height: 43px;
+                         
+                 background: url(../img/un_ico_home_v620.png) 
+                 no-repeat 0 -260px/2 ;
+                 background-size:208px/2 655px/2;
+             }
+         }
+    }
+    .common_right{
+          flex: 2;
+        //   background-color: lightseagreen;
+          display: flex;
+          flex-wrap: wrap;
+          span{
+              width: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-sizing: border-box;
+               
+              &:nth-child(1){
+                border-right: 1px solid white;
+              } 
+              &:nth-child(3){
+                border-right: 1px solid white;
+              } 
+              &:nth-child(1){
+                border-bottom: 1px solid white;
+              } 
+              &:nth-child(2){
+                border-bottom: 1px solid white;
+              } 
+             
+
+          }
+    }
+    .ticket{
+        .common{
+            background-color: @tickerColor;
+            .common_left{
+               .server_icon{
+                   background:url(../img/un_ico_home_v620.png) no-repeat 0 -596px/2;
+                   background-size:208px/2 655px/2;
+                }
+            }
+        }
+    }
+    .travel{
+        .common{
+            background-color: @travelColor;
+            .common_left{
+                .server_icon{
+                    background:url(../img/un_ico_home_v620.png) no-repeat 0 -472px/2;
+                    background-size:208px/2 655px/2;
+                 }
+             }
+        }
+    }
+}

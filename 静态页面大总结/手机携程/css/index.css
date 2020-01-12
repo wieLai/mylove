@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+.view {
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #eee;
+}
+.view .common {
+  height: 90px;
+  background-color: #fa7f50;
+  display: flex;
+  border-radius: 5px;
+  margin-bottom: 6px;
+  color: white;
+}
+.view .common_left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid white;
+}
+.view .common_left a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.view .common_left a .server_icon {
+  width: 43px;
+  height: 43px;
+  background: url(../img/un_ico_home_v620.png) no-repeat 0 -130px;
+  background-size: 104px 327.5px;
+}
+.view .common_right {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+}
+.view .common_right span {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.view .common_right span:nth-child(1) {
+  border-right: 1px solid white;
+}
+.view .common_right span:nth-child(3) {
+  border-right: 1px solid white;
+}
+.view .common_right span:nth-child(1) {
+  border-bottom: 1px solid white;
+}
+.view .common_right span:nth-child(2) {
+  border-bottom: 1px solid white;
+}
+.view .ticket .common {
+  background-color: #3d98ff;
+}
+.view .ticket .common .common_left .server_icon {
+  background: url(../img/un_ico_home_v620.png) no-repeat 0 -298px;
+  background-size: 104px 327.5px;
+}
+.view .travel .common {
+  background-color: #44c522;
+}
+.view .travel .common .common_left .server_icon {
+  background: url(../img/un_ico_home_v620.png) no-repeat 0 -236px;
+  background-size: 104px 327.5px;
+}

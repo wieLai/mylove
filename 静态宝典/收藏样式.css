@@ -1,0 +1,46 @@
+/* 清除浮动 */
+/* - 单伪元素清除浮动 */
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+/* - 双伪元素清除浮动 */
+.clearfix {
+    *zoom: 1
+}
+
+
+/* 显示...省略效果 */
+
+
+
+
+/*  */
+
+
+
+
+    li:nth-child(2n) {
+      /* /* n的取值从0开始  */
+      color: red;
+    }
+
+    li:nth-child(2n+1) {
+      color: blue;
+    } 
+    
+    li:nth-child(odd){
+        /* odd  是奇数的意思 */
+        color: red;
+      }
+    li:nth-child(even){
+        /* even 是偶数的意思 */
+        color: blue;
+      }
+
+

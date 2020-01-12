@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    在浏览器的话，实现http无状态，也就是状态保持  会使用cookier session  他们两都是浏览器的默认行为
+     
+
+    但是 移动端没有浏览器   app没有  小程序也没有（获取授权） 
+
+    
+    本地存储 和  cookie session的区别就是 ： cookie session是浏览器的默认行为
+    cookie session 他们登录之后（服务端设置set-cookie之后的每次请求他都会自动地带上cookie值
+
+
+    cookie
+    - 只能存储字符串
+    - 它是存储在客户端--不安全
+    - 它存储的大小有限制，原则上不超过4K
+
+      
+               cookie值其实就是一个有用的字符串
+               在响应报文中写入请求头的方式：：：
+                        // res.writeHead(200,{
+                        //     'Set-Cookie':'isLogin=true'
+                        // })
+
+
+    老师说记得保持这种良好的习惯，先判断有没有那个值，再判断那个值是不是我们要的那个值
+    if(req.session.isLogin && req.session.isLogin == 'true')
+
+    重定向代码块 
+    res.redirect('/login')
+    
+</body>
+</html>

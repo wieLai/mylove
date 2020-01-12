@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <style>
+      .box{
+           margin:  100px auto;
+           width: 500px;
+           height: 400px;
+           background-color: aqua;
+           display: flex;
+           /* flex-direction: row; */
+           /* flex-direction: row-reverse; */
+           /* flex-direction: column; */
+           /* flex-direction: column-reverse; */
+
+           /* justify-content: flex-start; */
+           /* justify-content: flex-end; */
+           /* justify-content: space-around; */
+           /* justify-content: space-between; */
+           justify-content: center;
+
+           /*  单行意思就是：子元素的总宽度并没有超过父级元素的宽度，一行就能排列好*/
+
+           /* 当子元素超过父级元素的时候，子元素会缩放 */
+            
+            /* 宽度可以继承，高度不可以  body 和 html 的高度默认是0  */
+
+            /* 可以稍微地注意一下，flex布局的一个兼容性，，，
+            最好可以问一下老师，出去之后，的对于flex布局的兼容性问题怎么处理 */
+
+
+            /* 子元素设置了flex:1 之后,原有写死的宽度不再起作用 */
+
+            /* 一般高度可以写死，宽度不写死 */
+      }
+      .one,.two ,.three{
+          width:100px;
+          height: 100px;
+          
+      }
+      .one{
+          background-color: blue;;
+      }
+      .two{
+          background-color: chartreuse;;
+      }
+      .three{
+          background-color: darkcyan;;
+      }
+     </style>
+</head>
+<body>
+   <div class="box">
+    <div class="one">1</div>
+    <div class="two">2</div>
+        <div class="three">3</div>
+   </div>
+</body>
+</html>

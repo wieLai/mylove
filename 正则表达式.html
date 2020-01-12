@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- 学习正则表达式就是学习它的元字符
+站位符：： 它占据一个位置，说明后期需要传入相应的字符进行匹配
+.点    :代表任意字符
+\d:代表所有数字0~9
+\D:代表所有非数字
+\w:所有合法字符：0-9A-Za-z_         、、、、还有没有王法了
+\W:所有非法字符
+\s:空字符                          、、、空，色即是空，大s，小s一点都不漂亮
+\S：非空字符
+[]:代表一个范围：[0-9][13579]:你只能输入这个范围中的某个字符 -->
+
+
+
+    <!-- 修饰符：：：
+修饰前面的字符所出现的次数，前面的字符可以是占位符也可以是具体的字符，默认只修饰前面的一个字符，如果需要有多个，则使用()包含
+修饰符绝对不会单独的存在 ，因它的作用是用来修饰的，如修饰占位符
+*:代表前面的字符出现任意次
+？：代表前面的字符出现0次或1次，就是有就只能有一个，没有也是true  ，两个或者多个就false
++：代表前面的字符出现1次或多次，0次false，没有不行，一定要有
+{n}:代表前面的字符出现n次
+{n,m}:代表前面的字符最少出现n次，最多出现m次
+{n,}:代表前面的字符最少出现n次，最多没有限制
+^:代表开始   当需要有严格的位数匹配的时候一般就需要添加^和$
+$:代表结构
+（）：改变优先级，提取字符串
+\:转义
+原则：：：从左写到右，先占位后修饰 -->
+
+
+    <!-- 模版引擎原理 -->
+    <script id='aa' type='text/template'>
+        <ul>
+            <li><%=name%></li>
+        </ul>
+    </script>
+    <script>
+
+        var obj = {
+            name: 'jack'
+        }
+        //    自己的练习;;;
+        // let str = document.querySelector('#aa').innerHTML
+        // console.log(str)
+        // let reg =/<%=(\w+)%>/   //正则只是关注是否包含
+        //  let res = reg.exec(str)
+        // console.log(res)//0: "<%=name%>" 1: "name"
+        // let value = obj[res[1]]  //用匹配到的属性名取到数据（对象）中的对应的属性值的值
+        // console.log(value)
+        // let res2 = str.replace(res[0],value)
+        //  console.log(res2)
+
+
+
+
+
+
+//老师的练习：：：
+        // var str = document.querySelector('#aa').innerHTML
+        // console.log(str)
+        // var reg = /{{(\w+)}}/
+        // var res = reg.exec(str)
+        // console.log(res)
+        // var value = obj[res[1]] // jack
+        // str = str.replace(res[0],value)  (被替换，替换)
+        // console.log(str)
+
+        // var reg = /^1[35678]\d{9}$/
+        // 020-12345678
+        // 07311234567
+        // <%= name %>
+        // var str = 'wuhu0723@126.com'
+        // var reg = /^(\w+)[@]((\w+)[.](\w{2,4}))$/
+        // var reg = /^0\d{2,3}[-]?[1-9]\d{6,7}$/
+        // 13645654765676645
+        // test:侧重是匹配，返回bool值，如果可以匹配成功则返回true,否则返回False
+        // var res = reg.test(str)
+        // exec:侧重的是匹配之后的字符串提取，返回一个数组，里面就包含着源字符串和提取字符串，如果不法匹配则返回null
+        // 方法：将你想提取的字符串的正则表达式部分用()包含
+        // var res = reg.exec(str)
+        // console.log(res)
+
+    </script>
+</body>
+
+</html>

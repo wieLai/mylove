@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       .box{
+           display: flex;
+           margin: 0 auto;
+           width: 200px;
+           height: 200px;
+           background-color: aqua;
+           justify-content: center;
+           align-items: center;
+
+           .smalbox{
+                width: 50px;
+                height: 50px;
+                background:#eee;
+           }
+       }
+    </style>
+</head>
+<body>
+        <!-- 注意点：：：
+        防抖技术
+        输入框没输入一个字就向服务器发起请求。    
+        定时器防抖技术。
+        目的：减少服务器请求的压力。
+        技术点：通过定时器实现，降低触发频率 -->
+       <!-- let timer = 0;
+      clearTimeout(timer);
+      timer = setTimeout(()=>{
+       // 发请求代码写这里
+       },500); -->
+
+
+
+       <!-- 页面栈
+小程序对页面栈有严格控制，最多只会保留 10 个历史记录，超过 10 层就点不动了。
+这种情况容易出现在 ：两个普通页之间能来回跳转的，如列表页可以跳转搜索页，搜索页可以跳列表页。
+
+解决办法：使用替换方式打开页面：
+<navigator open-type="redirect" url="xxx">  </navigator>
+组件的方式替换页面
+JS的方式替换页面
+wx.redirectTo({
+    url:'xxx'
+  } -->
+
+
+
+
+
+  <!-- 小程序原生组件注意
+踩坑
+小程序中有部分组件直接使用 手机原生 的功能，如 video 视频，textarea，获取焦点的 input。
+原生组件的显示层级非常高，只能再通过原生组件调整层级才可以盖住原生组件。
+
+脱坑
+为了解决原生组件层级最高的限制。小程序专门提供了 cover-view 和 cover-image 组件，
+可以覆盖在部分原生组件上面。这两个组件也是原生组件，但是使用限制与其他原生组件有所不同。 -->
+
+
+
+
+</body>
+<script>
+// var a = {a: 1,b: 2};var b = a.a;var c = a;c.a = 3;b ++;console.log(a.a); console.log(b);
+
+// var ary = Array(3);
+// ary[0]= 2;
+// var result = ary.map(function(elem) {
+//      return '1'; 
+//     })
+
+
+
+
+// class Student{
+//   constructor(name,age,sex){
+//     this.name = name;
+//     this.age = age;
+//     this.sex = sex;
+//   }
+//   printAge(){
+//     console.log(this.age);
+//   }
+//   printSex(){
+//     console.log(this.sex);
+//   }
+// }
+// const student = new Student('张三', 18, '男');
+// student.printAge();
+// student.printSex();
+var ary = Array(3);ary[0]= 2; var result = ary.map(function(elem) { return '1'; });
+console.log(ary)
+</script>
+</html>

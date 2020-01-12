@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 协议名  ip  端口号  三者任一不同则为跨域
+
+
+
+   跨域的解决办法
+   1 服务端： 
+    直接按路由那里设置请求头 把头响应回去 就OK了
+   // res.setHeader('Access-Control-Allow-Origin','允许跨域的域名');
+   // res.setHeader('Access-Control-Allow-Origin','http://127.0.0.1:9091');
+   res.setHeader('Access-Control-Allow-Origin','*'); // *代表所有的其他域名都可以跨域访问 -->
+  
+
+   
+   <!-- 2 jsonp跨域：
+   实际就是利用 一些标签天然的跨域能力 例如 src  url href  。。。 
+   对接口进行请求 配合服务端返回一个函数调用形式接收返回数据  -->
+
+    <!-- 就是前端发通过请求把一个函数名 当做参数带过去 后端返回一个函数调用的形式 并且把数据带回来 -->
+    <!-- （实际就是回调函数） -->
+
+   <!--  res.end('fn()')
+   res.end(`${callback}(${json})`);
+   function fn123(data){
+    // console.log('函数被调用了');
+    console.log(data);
+  } -->
+
+<!-- <script src="http://127.0.0.1:9092/jsonpCross?callback=fn123"></script>  -->
+
+</body>
+</html>
